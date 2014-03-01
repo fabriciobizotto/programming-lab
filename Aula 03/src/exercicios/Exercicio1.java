@@ -8,51 +8,30 @@ package exercicios;
 import java.util.Scanner;
 
 /**
- * Utilizando a função Scanner, criar um programa que solicite o nome, o salário
- * bruto, a porcentagem de inss, a porcentagem de FGTS. Com estas informações
- * calcular o valor do inss a descontar, o valor do FGTS e o salário líquido do
- * funcionário. Imprimir o nome, salário bruto, inss, fgts e salário líquido.
- *
- * Funcionário	Salário Bruto	INSS(-)	FGTS	Bonificação(+)	SalárioLíquido Fulano
- * Fulano       1000.0          80.0	80.0	150.0           1070.0
+ * Escreva um programa que leia e troque o valor de duas variáveis. Imprima os
+ * valores trocados.
  *
  * @author fabricio
  */
 public class Exercicio1 {
 
     public static void main(String[] args) {
-        String nomeFuncionario;
-        double salarioBruto;
-        double salarioLiquido;
-        double porcentagemInss;
-        double porcentagemFgts;
-        double valorInss;
-        double valorFgts;
-        double valorBonificacao;
+        String var1;
+        String var2;
+        String auxiliar;
 
         Scanner entrada = new Scanner(System.in);
+        System.out.print("Informe o valor da primeira variável: ");
+        var1 = entrada.next();
+        System.out.print("Informe o valor da segunda variável: ");
+        var2 = entrada.next();
 
-        System.out.print("Informe o nome do funcionário: ");
-        nomeFuncionario = entrada.next();
-        System.out.print("Informe o salário bruto do funcionário " + nomeFuncionario + ": ");
-        salarioBruto = entrada.nextDouble();
-        System.out.print("Informe a porcentagem de INSS: ");
-        porcentagemInss = entrada.nextDouble();
-        System.out.print("Informe a porcentagem de FGTS: ");
-        porcentagemFgts = entrada.nextDouble();
-        System.out.print("Informe o valor da bonificação: ");
-        valorBonificacao = entrada.nextDouble();
+        auxiliar = var1;
+        var1 = var2;
+        var2 = auxiliar;
 
-        //Calcula o inss devido e fgts
-        valorInss = salarioBruto * (porcentagemInss / 100);
-        valorFgts = salarioBruto * (porcentagemFgts / 100);
-
-        //Calcula o salário líquido
-        salarioLiquido = salarioBruto - valorInss + valorBonificacao;
-
-        System.out.println();
-        System.out.println("Funcionário\tSalário Bruto\tINSS(-)\tFGTS\tBonificação(+)\tSalárioLíquido");
-        System.out.println(nomeFuncionario + "\t\t" + salarioBruto + "\t\t" + valorInss + "\t" + valorFgts + "\t" + valorBonificacao + "\t\t" + salarioLiquido);
+        System.out.println("Primeira variável: " + var1);
+        System.out.println("Segunda variável: " + var2);
 
     }
 }
