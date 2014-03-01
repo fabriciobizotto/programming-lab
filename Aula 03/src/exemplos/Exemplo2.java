@@ -1,5 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package exemplos;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -8,26 +16,17 @@ import java.util.Scanner;
  */
 public class Exemplo2 {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) throws ParseException {
         String nome;
-        int cpf;
-        double salario;
-        
-        //capptura o que e digitado
+        int idade;
+
         Scanner entrada = new Scanner(System.in);
-
-        System.out.print("Digite seu nome: ");
+        System.out.print("Qual é o seu nome?\n");
         nome = entrada.next();
-        System.out.print("Digite seu cpf: ");
-        cpf = entrada.nextInt();
-        System.out.print("Digite seu salario: ");
-        salario = entrada.nextDouble();
-
-        String resultado = "Seu nome e: " + nome
-                + ", seu cpf e: " + cpf
-                + " e seu salario e: " + salario + " reais.";
-
-        System.out.printf(resultado + "\n");
+        System.out.print("Olá " + nome + "!, qual é a sua idade?\n");
+        idade = entrada.nextInt();
+        System.out.println("Você sabia que em cinco anos você terá " + (idade + 5)
+                + " anos e cinco anos antes você tinha " + (idade - 5) + "?");
 
     }
 
