@@ -17,7 +17,7 @@ public class Exemplo3 {
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Digite seu nome: ");
-        nome = entrada.next();
+        nome = entrada.nextLine();
         System.out.print("Digite seu cpf: ");
         cpf = entrada.nextInt();
         System.out.print("Digite seu salario: ");

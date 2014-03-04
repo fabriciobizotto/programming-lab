@@ -22,9 +22,9 @@ public class Exercicio1 {
 
         Scanner entrada = new Scanner(System.in);
         System.out.print("Informe o valor da primeira variável: ");
-        var1 = entrada.next();
+        var1 = entrada.nextLine();
         System.out.print("Informe o valor da segunda variável: ");
-        var2 = entrada.next();
+        var2 = entrada.nextLine();
 
         auxiliar = var1;
         var1 = var2;

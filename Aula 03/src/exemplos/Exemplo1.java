@@ -22,7 +22,7 @@ public class Exemplo1 {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Digite sua idade: ");
         idade = entrada.nextInt();
-        System.out.printf("Sua idade e: "+ idade + "\n");
+        System.out.printf("Sua idade e: " + idade + "\n");
 
     }
 

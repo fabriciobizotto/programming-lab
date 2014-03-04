@@ -15,15 +15,12 @@ public class Exemplo4 {
 
     public static void main(String[] args) {
         String nomeFuncionario;
-        double salarioBruto;
-        double salarioLiquido;
-        double porcentagemInss = 0.08;
-        double valorInss;
+        double salarioBruto, salarioLiquido, porcentagemInss = 0.08, valorInss;
 
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Informe o nome do funcionário: ");
-        nomeFuncionario = entrada.next();
+        nomeFuncionario = entrada.nextLine();
         System.out.print("Informe o salário bruto do funcionário " + nomeFuncionario + ": ");
         salarioBruto = entrada.nextDouble();
 

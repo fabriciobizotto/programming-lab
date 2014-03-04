@@ -6,8 +6,6 @@
 package exemplos;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -22,7 +20,7 @@ public class Exemplo2 {
 
         Scanner entrada = new Scanner(System.in);
         System.out.print("Qual é o seu nome?\n");
-        nome = entrada.next();
+        nome = entrada.nextLine();
         System.out.print("Olá " + nome + "!, qual é a sua idade?\n");
         idade = entrada.nextInt();
         System.out.println("Você sabia que em cinco anos você terá " + (idade + 5)
