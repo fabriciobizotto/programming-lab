@@ -22,7 +22,7 @@ public class LerArquivoArray2 {
         try {
             LerArquivoArray2 lerArquivo2 = new LerArquivoArray2();
             File arquivo = new File("/home/fabricio/lista_precos.txt");
-            String linha, codigo, descricao, valorTexto;
+            String line, codigo, descricao, valorTexto;
             double valor = 0;
             int lin = 0;
             int totalLinhas = lerArquivo2.getTotalLinhas(arquivo);
@@ -30,10 +30,10 @@ public class LerArquivoArray2 {
             Scanner entrada = new Scanner(arquivo);
             String[][] lista = new String[totalLinhas][3];
             while (entrada.hasNext()) {
-                linha = entrada.nextLine();
-                codigo = linha.substring(0, 6);
-                descricao = linha.substring(6, 57).trim();
-                valorTexto = linha.substring(66);
+                line = entrada.nextLine();
+                codigo = line.substring(0, 6);
+                descricao = line.substring(6, 57).trim();
+                valorTexto = line.substring(66);
 
                 //Verifica se existe mais que um ponto no texto. 
                 int charCount = valorTexto.replaceAll("[^.]", "").length();
@@ -42,13 +42,14 @@ public class LerArquivoArray2 {
                     valorTexto = valorTexto.replaceFirst("\\.", "");
                 }
                 valor = Double.parseDouble(valorTexto);
+                //insere as informações dentro do array, linha e coluna
                 lista[lin][0] = codigo;
                 lista[lin][1] = descricao;
                 lista[lin++][2] = valor + "";
             }
-            for (int i = 0; i < lista.length; i++) {
-                for (int j = 0; j < lista[i].length; j++) {
-                    System.out.print(lista[i][j] + "|");
+            for (int linha = 0; linha < lista.length; linha++) {
+                for (int j = 0; j < lista[linha].length; j++) {
+                    System.out.print(lista[linha][j] + "|");
                 }
                 System.out.println();
             }
