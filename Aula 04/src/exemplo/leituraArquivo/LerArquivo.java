@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package exemplo;
+package exemplo.leituraArquivo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,7 +23,7 @@ public class LerArquivo {
         try {
             String nome, cidade, estado, idade;
 
-            Scanner entrada = new Scanner(new File("arquivo.txt"));
+            Scanner entrada = new Scanner(new File("/home/fabricio/arquivo.txt"));
             entrada.useDelimiter("\\||\\n");
             while (entrada.hasNext()) {
                 nome = entrada.next();
