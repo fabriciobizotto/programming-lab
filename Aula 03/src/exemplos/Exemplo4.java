@@ -10,7 +10,7 @@ public class Exemplo4 {
 
     public static void main(String[] args) {
         String nomeFuncionario;
-        double salarioBruto, salarioLiquido, porcentagemInss = 0.08, valorInss;
+        double salarioBruto, salarioLiquido, porcentagemInss = 8, valorInss;
 
         Scanner entrada = new Scanner(System.in);
 
@@ -20,13 +20,13 @@ public class Exemplo4 {
         salarioBruto = entrada.nextDouble();
 
         //Calcula o inss devido
-        valorInss = salarioBruto * porcentagemInss;
+        valorInss = (salarioBruto * porcentagemInss) / 100;
         //Calcula o salário líquido
         salarioLiquido = salarioBruto - valorInss;
 
         System.out.println();
         System.out.println("Funcionário\tSalário Bruto\tINSS(-)\tSalárioLíquido");
-        System.out.println(nomeFuncionario + "\t" + salarioBruto + "\t\t" + valorInss + "\t" + salarioLiquido);
+        System.out.println(nomeFuncionario + "\t\t" + salarioBruto + "\t\t" + valorInss + "\t" + salarioLiquido);
 
     }
 }

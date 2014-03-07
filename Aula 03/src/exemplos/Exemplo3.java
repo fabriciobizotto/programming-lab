@@ -11,19 +11,14 @@ public class Exemplo3 {
 
     public static void main(String[] args) {
         String nome;
-        //Pode ser utilizado long para o cpf. Não pode utilizar int pois o número é muito grande
-        //Tamanho máximo do int é 2147483647
-        int cpf;
+        long cpf;
         double salario;
-//        System.out.println(Integer.MAX_VALUE);
-
-        //capptura o que e digitado
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Digite seu nome: ");
         nome = entrada.nextLine();
         System.out.print("Digite seu cpf: ");
-        cpf = entrada.nextInt();
+        cpf = entrada.nextLong();
         System.out.print("Digite seu salario: ");
         salario = entrada.nextDouble();
 
@@ -31,7 +26,7 @@ public class Exemplo3 {
                 + ", seu cpf e: " + cpf
                 + " e seu salario e: " + salario + " reais.";
 
-        System.out.printf(resultado + "\n");
+        System.out.print(resultado + "\n");
 
     }
 
