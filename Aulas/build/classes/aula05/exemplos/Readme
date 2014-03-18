@@ -1,0 +1,18 @@
+Aula sobre estrutura de controle SWITCH.
+
+Estrutura padrao
+
+switch(teste) {
+
+case valor:
+    faz alguma coisa;
+    break;
+case valor:
+    faz alguma coisa;
+    break;
+case valor:
+    faz alguma coisa;
+    break;
+default
+    execução padrão;
+}

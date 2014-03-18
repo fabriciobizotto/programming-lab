@@ -9,9 +9,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Desenvolver um algoritmo (ou programa) que calcule a média aritmética de
- * vários valores inteiros positivos informados pelo usuário. O final da leitura
- * acontecerá quando for lido um valor negativo.
+ * Este exercicio nao foi passado em aula. Desenvolver um algoritmo (ou
+ * programa) que calcule a média aritmética de vários valores inteiros positivos
+ * informados pelo usuário. O final da leitura acontecerá quando for lido um
+ * valor negativo.
  *
  * @author fabricio
  */
