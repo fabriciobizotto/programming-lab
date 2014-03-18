@@ -1,63 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package aula05.exercicios;
 
 import javax.swing.JOptionPane;
 
 /**
- * Verificar qual é o mês do número informado.
  *
  * @author fabricio
  */
 public class Exercicio03 {
 
     public static void main(String[] args) {
-        String mensagem = null;
-        String mesEntrada = JOptionPane.showInputDialog(null, "Informe o mês como número", "MÊS", JOptionPane.QUESTION_MESSAGE);
+        //Primeiro número
+        String numero1 = JOptionPane.showInputDialog(null, "Informe um número.", "Número 1", JOptionPane.INFORMATION_MESSAGE);
+        //Segundo número
+        String numero2 = JOptionPane.showInputDialog(null, "Informe um número.", "Número 2", JOptionPane.INFORMATION_MESSAGE);
+        //Informe a operação +-*/
+        String op = JOptionPane.showInputDialog(null, "Informe a operação.", "+ - * /", JOptionPane.INFORMATION_MESSAGE);
 
-        //Converte String em Integer
-        int mes = Integer.parseInt(mesEntrada);
+        //Converte os números para o tipo double
+        double n1 = Double.parseDouble(numero1);
+        double n2 = Double.parseDouble(numero2);
+        double calculo = 0L;
+        //Identifica se calculou. Se sim mostra o valor calculado.
+        boolean calculou = false;
 
-        switch (mes) {
-            case 1:
-                mensagem = "Janeiro";
+        switch (op) {
+            case "+":
+                calculo = n1 + n2;
+                calculou = true;
                 break;
-            case 2:
-                mensagem = "Fevereiro";
+            case "-":
+                calculo = n1 - n2;
+                calculou = true;
                 break;
-            case 3:
-                mensagem = "Março";
+            case "*":
+                calculo = n1 * n2;
+                calculou = true;
                 break;
-            case 4:
-                mensagem = "Abril";
-                break;
-            case 5:
-                mensagem = "Maio";
-                break;
-            case 6:
-                mensagem = "Junho";
-                break;
-            case 7:
-                mensagem = "Julho";
-                break;
-            case 8:
-                mensagem = "Agosto";
-                break;
-            case 9:
-                mensagem = "Setembro";
-                break;
-            case 10:
-                mensagem = "Outubro";
-                break;
-            case 11:
-                mensagem = "Novembro";
-                break;
-            case 12:
-                mensagem = "Dezembro";
+            case "/":
+                calculo = n1 / n2;
+                calculou = true;
                 break;
             default:
-                mensagem = "Mês Inválido!";
+                calculou = false;
+                JOptionPane.showMessageDialog(null, "Operação inválida!", "ERRO", JOptionPane.ERROR_MESSAGE);
         }
-
-        JOptionPane.showMessageDialog(null, mensagem, "Mensagem", JOptionPane.INFORMATION_MESSAGE);
+        if (calculou) {
+            JOptionPane.showMessageDialog(null, "Valor calculado: " + calculo, "Mensagem", JOptionPane.INFORMATION_MESSAGE);
+        }
 
     }
 }

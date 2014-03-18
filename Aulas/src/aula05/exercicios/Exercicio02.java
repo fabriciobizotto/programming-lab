@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aula05.exercicios;
 
 import javax.swing.JOptionPane;
 
 /**
- * Verificar qual é o estado da região sul correspondente a sigla informada.
+ * Verificar qual é o mês do número informado.
  *
  * @author fabricio
  */
@@ -16,28 +11,52 @@ public class Exercicio02 {
 
     public static void main(String[] args) {
         String mensagem = null;
-        //Capturar as informações digitadas pelo usuário.
-        String sigla = JOptionPane.showInputDialog(null, "Informe a sigla de um estado da região sul do Brasil", "Sigla", JOptionPane.QUESTION_MESSAGE);
+        String mesEntrada = JOptionPane.showInputDialog(null, "Informe o mês como número", "MÊS", JOptionPane.QUESTION_MESSAGE);
 
-        //Caixa alta
-        sigla = sigla.toUpperCase();
+        //Converte String em Integer
+        int mes = Integer.parseInt(mesEntrada);
 
-        //Utilizando a estrutura switch, verificar o sexo da pessoa.
-        switch (sigla) {
-            case "SC":
-                mensagem = sigla + " - Santa Catarina";
+        switch (mes) {
+            case 1:
+                mensagem = "Janeiro";
                 break;
-            case "PR":
-                mensagem = sigla + " - Paraná";
+            case 2:
+                mensagem = "Fevereiro";
                 break;
-            case "RS":
-                mensagem = sigla + " - Rio Grande do Sul";
+            case 3:
+                mensagem = "Março";
+                break;
+            case 4:
+                mensagem = "Abril";
+                break;
+            case 5:
+                mensagem = "Maio";
+                break;
+            case 6:
+                mensagem = "Junho";
+                break;
+            case 7:
+                mensagem = "Julho";
+                break;
+            case 8:
+                mensagem = "Agosto";
+                break;
+            case 9:
+                mensagem = "Setembro";
+                break;
+            case 10:
+                mensagem = "Outubro";
+                break;
+            case 11:
+                mensagem = "Novembro";
+                break;
+            case 12:
+                mensagem = "Dezembro";
                 break;
             default:
-                mensagem = "A sigla " + sigla + " não pertence a nenhum estado da região sul do Brasil.";
+                mensagem = "Mês Inválido!";
         }
 
-        //Mostrar uma mensagem para o usuário.
         JOptionPane.showMessageDialog(null, mensagem, "Mensagem", JOptionPane.INFORMATION_MESSAGE);
 
     }
