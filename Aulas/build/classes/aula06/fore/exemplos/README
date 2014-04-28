@@ -1,0 +1,6 @@
+Controle de 1 a 100 em incremento de 1;
+for( int i = 1; i <= 100; i++) {}
+Controle de 100 a 1 em decremento de 1;
+for( int i = 100; i >= 1; i--) {}
+Controle de 7 a 77 em incremento de 7;
+for( int i = 7; i <= 77; i+=7) {}
