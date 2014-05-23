@@ -5,7 +5,7 @@
  */
 package aula05.exemplos;
 
-import javax.swing.JOptionPane;
+    import javax.swing.JOptionPane;
 
 /**
  * Solicitar o nome e o sexo de uma pessoa. Exmplicar a utilização do charAt e
